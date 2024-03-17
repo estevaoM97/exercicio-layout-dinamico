@@ -1,0 +1,203 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color:  #f4e3f7;;
+}
+
+header {
+    background-color: rgba(36, 146, 243, 0.8);
+    padding: 16px 0 0;
+    margin: 0 auto;
+}
+
+.container, .sobre {
+    max-width: 1024px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+a {
+    text-decoration: none;
+    color: #000000;
+    font-size: 30px;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.menu-botao{
+    width: 2em;
+    cursor: pointer;
+}
+
+.menu-botao span{
+    height: 3px;
+    width: 100%;
+    background-color: #000000;
+    display: block;
+    margin-bottom: 8px;
+    border-radius: 5px;
+}
+
+.produtos img{
+    width: 200px;
+    height: 200px;
+}
+
+nav {
+    display: none;
+    border: 1px solid #000000;
+    color: #000000;
+    padding: 10px 0;
+    background-color: rgba(36, 146, 243, 1);
+}
+
+.menu{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.menu li {
+    float: left;
+    list-style: none;
+    padding: 16px;
+    border-top: 4px solid transparent;
+}
+
+.clear-left {
+    clear: both;
+}
+
+
+.sobre section, .sobre section h2, .sobre section p {
+    display: flex;
+    padding: 24px 20px;
+    align-items: center;
+}
+
+
+
+.produtos {
+    display: grid;
+    grid-template-columns: repeat(4, 24%);
+    row-gap: 5%;
+    justify-content: space-between;
+}
+
+h2, h3, p{
+    padding-bottom: 5px;
+}
+
+.produtos button {
+    cursor: pointer;
+    border: none;
+    border-radius: 0.5rem;
+    margin-top: 5px;
+    padding: 10px;
+    color: #000000;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+#botao-indisponivel{
+    background-color: red;
+}
+
+#botao-disponivel{
+    background-color: green;
+}
+
+.preco-cortado{
+    text-decoration: line-through;
+    color: #ccc;
+}
+
+.preco-normal {
+    font-weight: bold;
+}
+
+.produto {
+    margin-bottom: 3px;
+}
+
+p img {
+    max-width: 30px;
+    max-height: 30px;
+}
+
+p {
+    font-size: 20px;
+}
+
+@media screen and (max-width: 640px) {
+    header h1{
+        font-size: 1em;
+    }
+
+    .sobre section, .sobre section h2, .sobre section p {
+        display: block;
+    }
+
+    .sobre img{
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    .sobre h2{
+        margin: 5px;
+        font-size: 20px;
+        padding-top: 5px;
+    }
+
+    .sobre p {
+        padding: 10px;
+    }
+
+    .produtos {
+        display: block;
+        padding: 20px;
+    }
+}
+
+@media screen and (min-width: 641px) and (max-width:1023px) {
+    
+    header h1{
+        font-size: 2em;
+    }
+
+    .sobre section, .sobre section h2, .sobre section p {
+        display: block;
+        margin: 0 auto;
+        width: 96%;
+    }
+
+    .sobre img{
+        width: 100%;
+        margin: 0;
+    }
+
+    .sobre h2{
+        text-align: center;
+        font-size: 3em;
+    }
+
+    .sobre p {
+        font-size: 1.5em;
+    }
+
+    .produtos {
+        display: grid;
+        grid-template-columns: repeat(2, 46%);
+        row-gap: 5%;
+        justify-content: space-around;
+    }
+
+}
